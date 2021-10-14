@@ -10,6 +10,10 @@
   </head>
 
   <body>
+    <div class="nav-bar">
+      <h3><%= link_to 'Simple Airbnb', flats_path %></h3>
+      <%= link_to 'Add a Flat', new_flat_path %>
+    </div>
     <%= yield %>
   </body>
 </html>
