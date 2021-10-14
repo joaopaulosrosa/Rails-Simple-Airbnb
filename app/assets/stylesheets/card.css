@@ -1,0 +1,35 @@
+.flat {
+  background-color: #F8F9FA;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%), 0 3px 1px -2px rgb(0 0 0 / 20%);
+}
+
+.flat-header {
+  padding: 15px 20px;
+}
+
+.flat-info {
+  display: flex;
+  padding: 0 20px 20px 20px;
+}
+
+.flat-links {
+  background-color: white;
+  padding: 20px;
+}
+
+.flats img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.info-guests {
+  display: flex;
+  margin-right: 15px;
+}
+
+.info-price {
+  display: flex;
+  margin-right: 5px;
+}

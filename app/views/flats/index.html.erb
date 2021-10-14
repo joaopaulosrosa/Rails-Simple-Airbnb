@@ -1,21 +1,29 @@
-<div class="row">
+<div class="row" id="row-index">
   <h1>All our Flats</h1>
   <p>All <%= @flats.count %> flats</p>
 </div>
 <div class="flats">
   <% @flats.each do |flat| %>
     <div class="flat">
-      <img src="" alt="" class="flat-thumbnail">
-      <h2><%= flat.name %></h2>
-      <p><%= flat.description %></p>
-      <div class="info">
-        <p><%= flat.number_of_guests %></p>
-        <p><%= flat.price_per_night %></p>
+      <img src="<%= flat.img_url %>" alt="" class="flat-thumbnail">
+      <div class="flat-header">
+        <h2><%= flat.name %></h2>
+        <p><%= flat.address %></p>
+      </div>
+      <div class="flat-info">
+        <div class="info-guests">
+          <i class="fas fa-user" id="guests-icon"></i>
+          <p><%= flat.number_of_guests %></p>
+        </div>
+        <div class="info-price">
+          <i class="fas fa-euro-sign" id="euro-icon"></i>
+          <p><%= flat.price_per_night %></p>
+        </div>
       </div>
       <div class="flat-links">
-      <%= link_to 'More info', flat_path(flat)  %>
-      <%= link_to 'Edit', edit_flat_path(flat)  %>
-      <%= link_to 'Remove', flat_path(flat), method: :delete  %>
+      <a id="info-btn"><%= link_to 'More info', flat_path(flat)  %></a>
+      <a class="ml-3 text-warning"><%= link_to 'Edit', edit_flat_path(flat)  %></a>
+      <a id="delete-btn"><%= link_to 'Remove', flat_path(flat), method: :delete  %></p>
       </div>
     </div>
   <% end %>

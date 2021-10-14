@@ -1,3 +1,6 @@
+puts "Cleaning database..."
+Restaurant.destroy_all
+
 puts 'creating flat'
 Flat.create!(
   name: 'Light & Spacious Garden Flat London',
